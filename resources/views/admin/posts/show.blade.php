@@ -7,7 +7,7 @@
         <p><a href="{{route('admin.categories.show', $post->category->id)}}">{{$post->category->name}}</a></p>
         <h5>Tags</h5>
         @foreach ($post->tags as $tag)
-        <p>{{$tag->name}}</p>
+        <p><a href="{{route('admin.tags.show', $tag->id)}}">{{$tag->name}}</a></p>
         @endforeach
         
         <h5>Pubblicato: {{$post->published ? 'si' : 'no'}}</h5>

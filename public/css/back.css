@@ -19582,7 +19582,7 @@ table a {
   color: black;
 }
 
-.categoryShow ul li a {
+.categoryShow ul li a, .tagShow ul li a {
   text-decoration: none;
   color: white;
 }

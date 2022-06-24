@@ -32,7 +32,8 @@ const app = new Vue({
     data:{
         currentForm: null,
         postid: null,
-        categoryid: null
+        categoryid: null,
+        tagid: null
     },
     methods:{
         openModal(e,id){
@@ -40,6 +41,7 @@ const app = new Vue({
             console.log(id);
             this.postid = id;
             this.categoryid = id;
+            this.tagid = id;
             console.log(e.currentTarget);
             this.currentForm= e.currentTarget.parentNode;
             console.log(this.currentForm);

@@ -49798,7 +49798,8 @@ var app = new Vue({
   data: {
     currentForm: null,
     postid: null,
-    categoryid: null
+    categoryid: null,
+    tagid: null
   },
   methods: {
     openModal: function openModal(e, id) {
@@ -49806,6 +49807,7 @@ var app = new Vue({
       console.log(id);
       this.postid = id;
       this.categoryid = id;
+      this.tagid = id;
       console.log(e.currentTarget);
       this.currentForm = e.currentTarget.parentNode;
       console.log(this.currentForm);
@@ -49962,9 +49964,9 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! E:\Users\andre\Desktop\BooleanCareers\laravel-one-to-many\resources\js\back.js */"./resources/js/back.js");
-__webpack_require__(/*! E:\Users\andre\Desktop\BooleanCareers\laravel-one-to-many\resources\sass\back.scss */"./resources/sass/back.scss");
-module.exports = __webpack_require__(/*! E:\Users\andre\Desktop\BooleanCareers\laravel-one-to-many\resources\sass\front.scss */"./resources/sass/front.scss");
+__webpack_require__(/*! E:\Users\andre\Desktop\BooleanCareers\laravel-boolpress\resources\js\back.js */"./resources/js/back.js");
+__webpack_require__(/*! E:\Users\andre\Desktop\BooleanCareers\laravel-boolpress\resources\sass\back.scss */"./resources/sass/back.scss");
+module.exports = __webpack_require__(/*! E:\Users\andre\Desktop\BooleanCareers\laravel-boolpress\resources\sass\front.scss */"./resources/sass/front.scss");
 
 
 /***/ })

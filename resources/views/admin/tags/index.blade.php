@@ -12,7 +12,7 @@
         </button>
       </div>
       <div class="modal-body black">
-        Sei sicuro di voler eliminare la categoria con id: @{{tagid}} ?
+        Sei sicuro di voler eliminare il tag con id: @{{tagid}} ?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
