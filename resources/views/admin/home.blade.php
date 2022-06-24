@@ -22,6 +22,9 @@
                     <a href="{{route('admin.categories.index')}}">
                         <div class="btn btn-info">Lista Categorie</div>
                     </a>
+                    <a href="{{route('admin.tags.index')}}">
+                        <div class="btn btn-info">Lista Tags</div>
+                    </a>
                     
                 </div>
             </div>
