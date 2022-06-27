@@ -49,3 +49,12 @@ html, body {
 .m-b-md {
     margin-bottom: 30px;
 }
+.navbar{
+    background-color: rgb(77, 77, 77)!important;
+    .container-fluid{
+        a{
+            color: white!important;
+            text-decoration: none;
+        }
+    }
+}

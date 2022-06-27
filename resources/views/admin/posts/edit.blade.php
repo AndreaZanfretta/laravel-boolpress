@@ -1,7 +1,7 @@
 @extends('layouts.back')
 
 @section('content')
-    <form action="{{route('admin.posts.update', $post->id)}}" method="POST">
+    <form action="{{route('admin.posts.update', $post->id)}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -20,6 +20,16 @@
               @endforeach
             </select>
           </div>
+          <div class="form-group">
+            @if ($post->image)
+                <img id="uploadPreview" width="100" src="{{asset("storage/{$post->image}")}}" alt="{{$post->title}}">
+            @endif
+            <label for="image">Aggiungi immagine</label>
+            <input type="file" id="image" name="image" onchange="boolpress.previewImage();">
+            @error('image')
+               <div class="alert alert-danger">{{ $message }}</div>
+             @enderror
+        </div>
           <div class="form-group">
             <h5>Tags</h5>
             @foreach ($tag as $tag)

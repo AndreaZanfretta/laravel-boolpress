@@ -8,6 +8,7 @@ use App\Post;
 use App\Tag;
 use App\Category;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 
 class PostController extends Controller
@@ -18,6 +19,7 @@ class PostController extends Controller
         'content' => 'required',
         'published' => 'sometimes|accepted',
         'category_id' => 'nullable|exists:categories,id',
+        "image" => "nullable|image|mimes:jpeg,bmp,png,svg|max:2048",
         'tags' => 'nullable|exists:tags,id',
     ];
 
@@ -66,6 +68,10 @@ class PostController extends Controller
             $count++;
         };
         $newPost->slug = $slug;
+        if( isset($data['image']) ) {
+            $path_image = Storage::put('images', $data['image']);
+            $newPost->image = $path_image;
+        }
         $newPost->save();
         if(isset($data['tags'])){
             $newPost->tags()->sync($data['tags']);
@@ -130,8 +136,13 @@ class PostController extends Controller
                 $post->slug = $this->getSlug($post->title);
             }
         }
+        if( isset($data['image']) ) {
+            Storage::delete($post->image);
+            $path_image = Storage::put("images", $data['image']);
+            $post->image = $path_image;
+        }
 
-        $post->save();
+        $post->update();
         if(isset($data['tags'])){
             $post->tags()->sync($data['tags']);
         }

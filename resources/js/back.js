@@ -19,7 +19,6 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -47,9 +46,27 @@ const app = new Vue({
             console.log(this.currentForm);
             $('#deleteModal').modal('show');
         },
+        previewImage() {
+            var oFReader = new FileReader();
+            oFReader.readAsDataURL(document.getElementById("image").files[0]);
+    
+            oFReader.onload = function (oFREvent) {
+                document.getElementById("uploadPreview").src = oFREvent.target.result;
+            };
+        },
         submitForm(){
             this.currentForm.submit();
         }
 
     }
 });
+window.boolpress = {
+    previewImage() {
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("image").files[0]);
+
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("uploadPreview").src = oFREvent.target.result;
+        };
+    },
+}

@@ -19591,3 +19591,11 @@ table a {
   text-decoration: none;
   color: white;
 }
+.postsShow .image-container {
+  max-width: 500px;
+  max-height: 500px;
+}
+.postsShow .image-container img {
+  width: 100%;
+  height: 100%;
+}

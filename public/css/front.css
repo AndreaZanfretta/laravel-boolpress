@@ -19595,3 +19595,11 @@ html, body {
 .m-b-md {
   margin-bottom: 30px;
 }
+
+.navbar {
+  background-color: rgb(77, 77, 77) !important;
+}
+.navbar .container-fluid a, .navbar .container-sm a, .navbar .container-md a, .navbar .container-lg a, .navbar .container-xl a {
+  color: white !important;
+  text-decoration: none;
+}
