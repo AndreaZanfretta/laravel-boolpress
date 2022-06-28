@@ -18,8 +18,8 @@ class PostController extends Controller
         'title' => 'required|max:100',
         'content' => 'required',
         'published' => 'sometimes|accepted',
-        'category_id' => 'nullable|exists:categories,id',
-        "image" => "nullable|image|mimes:jpeg,bmp,png,svg|max:2048",
+        'category_id' => 'required|exists:categories,id',
+        "image" => "nullable|mimes:jpeg,jpg,bmp,png,svg",
         'tags' => 'nullable|exists:tags,id',
     ];
 

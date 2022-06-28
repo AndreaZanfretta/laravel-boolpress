@@ -1,14 +1,15 @@
 <template>
-    <div>
-        <h1>sono il main</h1>
+    <main>
+        <!-- <h1>sono il main</h1>
         <ul>
             <li v-for="(post, index) in posts" :key="index">
                 <span>{{post.title}}</span>
                 <a href="#" @click="getDetail(post.slug, index)">vedi dettaglio</a>
-                <span v-if="post.detail">{{post.detail.slug}}</span>
+                <span v-if="post[index].detail">{{post[index].detail.slug}}</span>
             </li
-        ></ul>
-    </div>
+        ></ul> -->
+        <router-view> </router-view>
+    </main>
 </template>
 
 <script>
