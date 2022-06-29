@@ -58,6 +58,6 @@ export default {
 
 <style scoped lang='scss'>
 .router-link-active{
-    color:red;
+    color:rgb(238, 0, 0)!important;
  }
 </style>

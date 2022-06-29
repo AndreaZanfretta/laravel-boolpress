@@ -9,6 +9,7 @@ import AboutComponent from './pages/AboutComponent';
 import ContactComponent from './pages/ContactComponent';
 import PostsComponent from './pages/PostsComponent';
 import SinglePostComponent from './pages/SinglePostComponent';
+import NotFoundComponent from './pages/NotFoundComponent';
 
 const router = new VueRouter({
     mode: 'history',
@@ -37,6 +38,11 @@ const router = new VueRouter({
             path: '/posts/:slug',
             name: 'single-post',
             component: SinglePostComponent
+        },
+        {
+            path: '*',
+            name: 'not-found',
+            component: NotFoundComponent
         },
     ]
 });
