@@ -30,6 +30,7 @@ class CommentController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        dump($data);
         $newComment = new Comment();
 
         $newComment->username = $data['username'];
