@@ -2232,6 +2232,9 @@ __webpack_require__.r(__webpack_exports__);
         console.log(res);
 
         _this.post.comments.push(res.data);
+
+        _this.formData.username = '';
+        _this.formData.content = '';
       })["catch"](function (err) {
         console.error(err);
       });

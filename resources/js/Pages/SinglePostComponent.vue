@@ -54,6 +54,8 @@ export default {
             .then(res => {
                 console.log(res);
                 this.post.comments.push(res.data);
+                this.formData.username = '';
+                this.formData.content = '';
             })
             .catch(err => {
                 console.error(err); 
